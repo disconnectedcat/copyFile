@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class ReadExcel {
-    public ArrayList<String> dataList() throws IOException {
+    private ArrayList<String> dataList() throws IOException {
         String filePath = "/Users/wangmengkai/Desktop/CSAIR/MENG信息/sourceFile.csv";
         FileReader fileReader = new FileReader(filePath);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -56,7 +56,7 @@ public class ReadExcel {
         System.out.println(dataList);
     }
 
-    public void copy(String source, String target) throws IOException {
+    private void copy(String source, String target) throws IOException {
         FileInputStream fis = new FileInputStream(source);
         FileOutputStream fos = new FileOutputStream(target);
         byte data[] = new byte[1024 * 8];
